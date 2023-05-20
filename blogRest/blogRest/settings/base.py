@@ -106,9 +106,7 @@ CORS_ALLOW_HEADERS = [
     'entryId'
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',
-]
+CORS_ALLOWED_ORIGINS = [ get_secret('ORIGIN'),]
 
 WSGI_APPLICATION = 'blogRest.wsgi.application'
 

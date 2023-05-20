@@ -1,11 +1,9 @@
 from django.db import models
-
+#
 from model_utils.models import TimeStampedModel
 from ckeditor_uploader.fields import RichTextUploadingField
-# Import required models
+#
 from applications.users.models import User, Interest
-
-# import managers
 from .managers import EntryManager, CategoryManager
 
 class Category(models.Model):

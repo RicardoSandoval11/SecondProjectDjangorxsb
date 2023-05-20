@@ -60,17 +60,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         return str(self.id) +' - '+self.full_name
 
 
-class Token(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    access_token = models.CharField(max_length=255)
-    refresh_token = models.CharField(max_length=255)
-    expires_in = models.DateTimeField()
 
-    class Meta:
-        verbose_name = 'Token'
-        verbose_name_plural = 'Tokens'
-    
-    def __str__(self):
-        return self.user.full_name+' - '+self.access_token
 
 
