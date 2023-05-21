@@ -4,6 +4,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [get_secret('ALLOWED_HOST')]
 
+CSRF_TRUSTED_ORIGINS = ['https://blogapp.store']
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
