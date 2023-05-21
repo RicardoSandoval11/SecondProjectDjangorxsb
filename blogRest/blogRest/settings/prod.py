@@ -21,6 +21,11 @@ DATABASES = {
 MEDIA_ROOT = BASE_DIR.child('media')
 MEDIA_URL = '/media/'
 
+# statif files
+
+STATICFILES_DIRS = [BASE_DIR.child('static')]
+STATIC_URL = '/static/'
+
 # Settings for ckeditor
 CKEDITOR_UPLOAD_PATH = '/uploads/'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
